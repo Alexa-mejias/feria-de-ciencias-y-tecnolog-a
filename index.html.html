@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyecto Feria Científica</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0faff;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #007acc, #005b99);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em; /* Título menos grande */
+        }
+        header img {
+            height: 90px;
+        }
+        .container {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.01);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #007acc;
+        }
+        .img-inline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .img-inline img {
+            height: 60px;
+        }
+        .inline-img-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .amtes1-larger {
+            width: 28%; /* Más pequeña que antes */
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            margin: 10px 0;
+        }
+        .amtes2-larger {
+            width: 28%; /* Más pequeña que antes */
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            margin: 10px 0;
+        }
+        .centered-img-small {
+            display: block;
+            margin: 10px auto;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .centered-img-small:hover,
+        .amtes1-larger:hover,
+        .amtes2-larger:hover {
+            transform: scale(1.03);
+        }
+        .bullet {
+            margin-left: 20px;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #007acc, transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Evaluación del proceso de cavitación hidrodinámica como potencial mejora en la calidad del agua del C.T.P. de Pococí</h1>
+        <img src="escudo.PNG" alt="Escudo" />
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>¿Por qué se hizo este proyecto?</h2>
+            <p>Este proyecto nació por la preocupación de los estudiantes del C.T.P. de Pococí sobre la calidad del agua que consumen a diario. Muchos reportaron malestares luego de beberla, y la mayoría expresó desconfianza sobre su estado. Ante esto, se buscó una forma científica, económica y accesible de mejorar la calidad del agua, sin el uso de químicos, utilizando un fenómeno físico poco común: la cavitación hidrodinámica.</p>
+        </div>
+
+        <div class="card">
+            <h2>¿Qué es la cavitación hidrodinámica?</h2>
+            <p>Es un proceso físico que ocurre cuando un líquido experimenta una caída rápida de presión, provocando la formación de burbujas de vapor. Al colapsar, estas burbujas generan energía que puede alterar físicamente algunas sustancias presentes en el agua. En este proyecto, se aplicó la cavitación como una técnica alternativa y de bajo costo para mejorar las condiciones del agua del pozo, ayudando a reducir impurezas y ajustar parámetros como el pH y los sólidos disueltos.</p>
+        </div>
+
+        <div class="card">
+            <h2>¿Qué papel tuvo el Arduino?</h2>
+            <ul class="bullet">
+                <li>Sensor de pH: para medir si el agua era ácida, neutra o básica.</li>
+                <li>Sensor TDS (Total Dissolved Solids): para conocer la cantidad de sólidos disueltos en el agua.</li>
+                <li>Pantalla LCD: que mostró los datos en tiempo real.</li>
+                <li>Tres LEDs (verde, amarillo y rojo): que indicaban si los valores eran adecuados, intermedios o fuera del rango ideal.</li>
+            </ul>
+            <p>Además, se incluirá un video que muestra cómo se armó todo el sistema con el Arduino, los sensores y el circuito completo.</p>
+        </div>
+
+        <div class="card">
+            <h2>¿Qué se observó con el microscopio?</h2>
+            <ul class="bullet">
+                <li>Antes del tratamiento: el agua presentaba partículas visibles y restos flotantes.</li>
+            </ul>
+            <div class="inline-img-row">
+                <img src="amtes1.jpg" alt="Antes 1" class="amtes1-larger" />
+                <img src="amtes2.jpg" alt="Antes 2" class="amtes2-larger" />
+            </div>
+            <ul class="bullet">
+                <li>Después del tratamiento: se notó una reducción en la cantidad de partículas observables, lo cual indica una mejora visual en la limpieza del agua.</li>
+            </ul>
+            <img src="despues.jpeg" alt="Después" class="centered-img-small" />
+        </div>
+    </div>
+</body>
+</html>
+
+
